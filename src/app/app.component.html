@@ -1,0 +1,41 @@
+<div class="row text-center">
+  <div class="col-lg-3">
+    <h1>Candidate</h1>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let c of candidate;let i=index">{{ c }}
+        <button class="btn btn-success fr" (click)="d1(i)">Move</button>
+        <button class="btn btn-danger fr" (click)="delete(i)">Delete</button>
+        
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-3">
+    <h1>Dose1</h1>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-warning" *ngFor="let c of dose1;let i =index"> {{c}}
+        <div class="btn btn-warning fr" (click)="d6(i)">Undo</div>
+        <div class="btn btn-success fr"(click)="d2(i)">Move</div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-3">
+    <h1>Dose2</h1>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info" *ngFor="let c of dose2;let i =index"> {{c}}
+        <div class="btn btn-warning fr" (click)="d5(i)">Undo</div>
+        <div class="btn btn-success fr" (click)="d3(i)">Move</div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-3">
+    <h1>BoosterDose</h1>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-success" *ngFor="let c of boosterDose;let i =index"> {{c}}
+        <div class="btn btn-warning fr" (click)="d4(i)">Undo</div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
